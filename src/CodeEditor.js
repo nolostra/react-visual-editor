@@ -39,12 +39,12 @@ const CodeEditor = ({ initialCode, onCodeChange, scope = {} }) => {
     const updatedCode = internalCode.replace(
       /style=\{[^}]+\}/,
       `style={{
-        width: '${newDimensions.width}px',
-        height: '${newDimensions.height}px',
+        width: '${newDimensions.width}',
+        height: '${newDimensions.height}',
         position: 'absolute',
         left: '${newDimensions.x}px',
         top: '${newDimensions.y}px'
-      }}`
+      }`
     );
     setInternalCode(updatedCode);
     onCodeChange(updatedCode);
@@ -91,7 +91,7 @@ const CodeEditor = ({ initialCode, onCodeChange, scope = {} }) => {
               <Rnd
                 size={{ width: previewDimensions.width, height: previewDimensions.height }}
                 position={{ x: previewDimensions.x, y: previewDimensions.y }}
-                onDragStop={(e, d) => handlePreviewUpdate(e, null, { style: { width: `${previewDimensions.width}px`, height: `${previewDimensions.height}px` } }, null, d)}
+                onDragStop={(e, d) => handlePreviewUpdate(e, null, { style: { width: `${previewDimensions.width }`, height: `${previewDimensions.height}` } }, null, d)}
                 onResizeStop={(e, direction, ref, delta, position) => handlePreviewUpdate(e, direction, ref, delta, position)}
                 bounds="parent"
               >
