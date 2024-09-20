@@ -1,32 +1,35 @@
-import React, { useState } from 'react';
-import CodeEditor from './CodeEditor';
+import React, { useState } from "react";
+import CodeEditor from "./CodeEditor";
 
 const initialCode = `
-
-  
   const MyComponent = () => {
-    return(  <h3 className="border bg-yellow-500 text-white p-4 rounded-md w-6">
-      Hello World! 👋
-    </h3>);
+    return(  
+      <h3 className="border bg-yellow-500 text-white p-4 rounded-md w-6">
+        Hello World! 👋
+      </h3>
+    );
   };
 
   render(<Wrapper><MyComponent /></Wrapper>);
 `;
 
-const ComponentEditor = () => {
-  const [code, setCode] = useState(initialCode);
+const ComponentEditor: React.FC = () => {
+  const [code, setCode] = useState<string>(initialCode);
 
-  const handleCodeChange = (newCode) => {
+  const handleCodeChange = (newCode: string) => {
     setCode(newCode);
   };
 
   return (
     <div className="p-4">
       <h2 className="text-2xl font-semibold mb-4">Edit Component Code</h2>
-      
+
       {/* Code Editor */}
       <div className="mb-8">
-        <CodeEditor code={code} onCodeChange={handleCodeChange} />
+        <CodeEditor
+          code={code} // Passing code prop
+          onCodeChange={handleCodeChange}
+        />
       </div>
 
       {/* Live Preview Section */}

@@ -7,7 +7,10 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "ai": "^3.3.44",
+    "dotenv": "^16.4.5",
     "lodash": "^4.17.21",
+    "openai": "^4.62.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-live": "^4.1.7",
@@ -40,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.7",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.0",
     "eslint-config-react-app": "^7.0.1",

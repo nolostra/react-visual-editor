@@ -2,7 +2,7 @@ import React from 'react';
 import ComponentEditor from './ComponentEditor';
 import './index.css'; // Import Tailwind and other styles
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App min-h-screen bg-gray-50 p-8 w-full">
       <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">
